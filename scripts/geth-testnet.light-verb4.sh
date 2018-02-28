@@ -1,0 +1,1 @@
+geth --testnet --datadir "./data" --syncmode "light"  --verbosity 4
