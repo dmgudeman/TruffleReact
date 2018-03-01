@@ -435,7 +435,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 38,
-        "sourceUnit": 564,
+        "sourceUnit": 565,
         "src": "25:67:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -449,10 +449,10 @@
               "id": 3,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 563,
+              "referencedDeclaration": 564,
               "src": "120:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$563",
+                "typeIdentifier": "t_contract$_MintableToken_$564",
                 "typeString": "contract MintableToken"
               }
             },
@@ -462,12 +462,12 @@
           }
         ],
         "contractDependencies": [
-          297,
-          393,
-          436,
-          468,
-          563,
-          809
+          298,
+          394,
+          437,
+          469,
+          564,
+          810
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -475,12 +475,12 @@
         "id": 37,
         "linearizedBaseContracts": [
           37,
-          563,
-          297,
-          809,
-          393,
-          436,
-          468
+          564,
+          298,
+          810,
+          394,
+          437,
+          469
         ],
         "name": "FreeExchange3",
         "nodeType": "ContractDefinition",
@@ -763,7 +763,7 @@
                       "name": "totalSupply_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 312,
+                      "referencedDeclaration": 313,
                       "src": "348:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -811,7 +811,7 @@
                         "name": "balances",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 310,
+                        "referencedDeclaration": 311,
                         "src": "387:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -827,7 +827,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 821,
+                          "referencedDeclaration": 822,
                           "src": "396:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -946,7 +946,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 38,
-        "sourceUnit": 564,
+        "sourceUnit": 565,
         "src": "25:67:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -960,10 +960,10 @@
               "id": 3,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 563,
+              "referencedDeclaration": 564,
               "src": "120:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$563",
+                "typeIdentifier": "t_contract$_MintableToken_$564",
                 "typeString": "contract MintableToken"
               }
             },
@@ -973,12 +973,12 @@
           }
         ],
         "contractDependencies": [
-          297,
-          393,
-          436,
-          468,
-          563,
-          809
+          298,
+          394,
+          437,
+          469,
+          564,
+          810
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -986,12 +986,12 @@
         "id": 37,
         "linearizedBaseContracts": [
           37,
-          563,
-          297,
-          809,
-          393,
-          436,
-          468
+          564,
+          298,
+          810,
+          394,
+          437,
+          469
         ],
         "name": "FreeExchange3",
         "nodeType": "ContractDefinition",
@@ -1274,7 +1274,7 @@
                       "name": "totalSupply_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 312,
+                      "referencedDeclaration": 313,
                       "src": "348:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1322,7 +1322,7 @@
                         "name": "balances",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 310,
+                        "referencedDeclaration": 311,
                         "src": "387:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -1338,7 +1338,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 821,
+                          "referencedDeclaration": 822,
                           "src": "396:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1436,5 +1436,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-01T00:23:39.211Z"
+  "updatedAt": "2018-03-01T18:52:52.137Z"
 }

@@ -8,14 +8,20 @@ import './css/pure-min.css'
 import './App.css'
 
 class App extends Component {
+  // myAddress = 0x297dBaD33f22Cc20d8a6e21cf6a77E8f36615238;
+  myAddress = 0x57529b1f235ac9356e478e66bcb2a4594d16dd10;
   constructor(props) {
     super(props)
 
     this.state = {
       storageValue: 0,
       web3: null,
-      tokenStorage: 10
+      tokenStorage: 10,
+      simpleStorage: null,
+      value: '',
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentWillMount() {
@@ -46,18 +52,19 @@ class App extends Component {
      */
 
     const contract = require('truffle-contract')
-    const simpleStorage = contract(SimpleStorageContract)
-    console.log(simpleStorage);
-    simpleStorage.setProvider(this.state.web3.currentProvider)
+    const x = contract(SimpleStorageContract);
+    this.setState({simpleStorage: x});
+    console.log(this.state.simpleStorage);
+    this.state.simpleStorage.setProvider(this.state.web3.currentProvider)
 
     // Declaring this for later so we can chain functions on SimpleStorage.
     var simpleStorageInstance
 
     // Get accounts.
     this.state.web3.eth.getAccounts((error, accounts) => {
-      simpleStorage.deployed().then((instance) => {
+      this.state.simpleStorage.deployed().then((instance) => {
         simpleStorageInstance = instance
-        console.log("INstance", instance);
+        console.log("Instanceeeeee", instance);
         // Stores a given value, 5 by default.
         return simpleStorageInstance.set(5, {from: accounts[0]})
       }).then((result) => {
@@ -69,18 +76,25 @@ class App extends Component {
       })
     })
   }
+  
 
+  handleSubmit(event) {
+    this.state.simpleStorage.deployed().then((instance) => {
+     // instance.transfer(this.myAddress, event.target.value);
+    // event.preventDefault();
+    console.log(instance); 
+    })
+    alert('A name was submitted: ' + this.state.value);
+  }
 
-
-  transferToken() {
-    simpleStorage.deployed().then((instance) => {
-      instance.transfer("0x297dBaD33f22Cc20d8a6e21cf6a77E8f36615238", 5);
+  transferToken(e) {
+    this.state.simpleStorage.deployed().then((instance) => {
+      instance.transfer({to: this.myAddress, value:e.target.value});
   })}
   
 
   handleChange(e){
-    let x = this.state.tokenStorage + e.target.value;
-        this.setState({tokenStorage : x });
+    this.setState({value: e.target.value})
   }
 
   render() {
@@ -96,7 +110,17 @@ class App extends Component {
               <h1>Good to Go!</h1>
               <p>Hi there</p>
               <input onChange={this.handleChange}/>
-              <button onclick="transferToken()">Transfer Token</button>
+              <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+
+        </label>
+        <label>
+          Dufus:
+        <input type="submit" value="Submit" />
+        </label>
+      </form>
               <p>Your Truffle Box is installed and ready.</p>
               <h2>Smart Contract Example</h2>
               <p>If your contracts compiled and migrated successfully, below will show a stored value of 5 (by default).</p>
