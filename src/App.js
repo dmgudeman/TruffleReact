@@ -73,8 +73,9 @@ class App extends Component {
 
 
   transferToken() {
-    simpleStorageInstance.transfer("0x297dBaD33f22Cc20d8a6e21cf6a77E8f36615238", 5);
-  }
+    simpleStorage.deployed().then((instance) => {
+      instance.transfer("0x297dBaD33f22Cc20d8a6e21cf6a77E8f36615238", 5);
+  })}
   
 
   handleChange(e){
