@@ -70,9 +70,16 @@ class App extends Component {
     })
   }
 
+
+
+  transferToken() {
+    simpleStorageInstance.transfer("0x297dBaD33f22Cc20d8a6e21cf6a77E8f36615238", 5);
+  }
+  
+
   handleChange(e){
-    let x = this.state.tokenStorage + e.target.value
-;    this.setState({tokenStorage : x });
+    let x = this.state.tokenStorage + e.target.value;
+        this.setState({tokenStorage : x });
   }
 
   render() {
@@ -88,6 +95,7 @@ class App extends Component {
               <h1>Good to Go!</h1>
               <p>Hi there</p>
               <input onChange={this.handleChange}/>
+              <button onclick="transferToken()">Transfer Token</button>
               <p>Your Truffle Box is installed and ready.</p>
               <h2>Smart Contract Example</h2>
               <p>If your contracts compiled and migrated successfully, below will show a stored value of 5 (by default).</p>
